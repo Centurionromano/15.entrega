@@ -1,27 +1,39 @@
 <?php
-// Cargar variables de entorno manualmente
-$dotenv = parse_ini_file(__DIR__ . '/.env');
+// Ruta del archivo .env
+$env_path = __DIR__ . '/.env';
+
+// Verificar si el archivo .env existe
+if (!file_exists($env_path)) {
+    die("❌ El archivo .env no existe en: $env_path");
+}
+
+// Intentar leer el archivo .env
+$dotenv = parse_ini_file($env_path);
+if ($dotenv === false) {
+    die("❌ No se pudo leer el archivo .env");
+}
+
+// Cargar las variables de entorno
 foreach ($dotenv as $key => $value) {
     putenv("$key=$value");
 }
 
-// Definir las variables de conexión a la base de datos
+// Obtener las variables necesarias
+$host = getenv('database.default.hostname');
+$dbname = getenv('database.default.database');
+$username = getenv('database.default.username');
+$password = getenv('database.default.password');
 
-$host = getenv('metro.proxy.rlwy.net'); // El servidor donde está alojada la base de datos (en este caso, 'localhost' indica que está en la misma máquina)
-$dbname = getenv('railway'); // El nombre de la base de datos a la que se quiere conectar
-$username = getenv('root'); // El nombre de usuario para acceder a la base de datos (por defecto 'root' en muchas instalaciones de MySQL)
-$password = getenv('eSprvwbFhbIGfICuVQstBYidFHLbtODo'); // La contraseña para el usuario (en este caso está vacía, lo cual es común en instalaciones locales sin configurar contraseña)
+// Mostrar los valores para depuración
+echo "🔍 Conectando a: Host=$host | DB=$dbname | Usuario=$username<br>";
 
-// Intenta realizar la conexión a la base de datos dentro de un bloque try-catch para manejar errores
 try {
-    // Intentar crear una nueva instancia de PDO para conectarse a la base de datos
+    // Establecer conexión PDO (agregar puerto 57120 explícitamente)
     $pdo = new PDO("mysql:host=$host;port=57120;dbname=$dbname", $username, $password);
-    // Establecer el modo de error de PDO a excepción (para que los errores se manejen con excepciones)
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "✅ Conexión exitosa a la base de datos.<br>";
 } catch (PDOException $e) {
-    // Si ocurre un error de conexión, se captura la excepción y se muestra un mensaje de error
-    echo 'Error de conexión: ' . $e->getMessage();
-    // Terminar la ejecución del script en caso de que no se pueda conectar a la base de datos
+    echo '❌ Error de conexión: ' . $e->getMessage();
     exit();
 }
 ?>
