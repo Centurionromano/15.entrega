@@ -1,6 +1,7 @@
 <?php
 // Ruta del archivo .env
-$env_path = __DIR__ . '/.env';
+$env_path = '/var/www/html/15.entrega/.env';
+
 
 // Verificar si el archivo .env existe
 if (!file_exists($env_path)) {
