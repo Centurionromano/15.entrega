@@ -1,7 +1,4 @@
--- Crear la base de datos
-CREATE DATABASE IF NOT EXISTS recipes_db;
-
-USE recipes_db;
+USE railway;
 
 -- Crear tabla de usuarios
 CREATE TABLE IF NOT EXISTS users (
