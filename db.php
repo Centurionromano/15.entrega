@@ -1,4 +1,10 @@
 <?php
+// Cargar variables de entorno manualmente
+$dotenv = parse_ini_file(__DIR__ . '/.env');
+foreach ($dotenv as $key => $value) {
+    putenv("$key=$value");
+}
+
 // Definir las variables de conexión a la base de datos
 
 $host = getenv('MYSQLHOST'); // El servidor donde está alojada la base de datos (en este caso, 'localhost' indica que está en la misma máquina)
@@ -9,7 +15,7 @@ $password = getenv('MYSQLPASSWORD'); // La contraseña para el usuario (en este 
 // Intenta realizar la conexión a la base de datos dentro de un bloque try-catch para manejar errores
 try {
     // Intentar crear una nueva instancia de PDO para conectarse a la base de datos
-    $pdo = new PDO("mysql:host=$host;port=3306;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=$host;port=57120;dbname=$dbname", $username, $password);
     // Establecer el modo de error de PDO a excepción (para que los errores se manejen con excepciones)
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
