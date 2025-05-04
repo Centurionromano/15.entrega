@@ -1,9 +1,10 @@
 <?php
 // Definir las variables de conexión a la base de datos
-$host = 'localhost'; // El servidor donde está alojada la base de datos (en este caso, 'localhost' indica que está en la misma máquina)
-$dbname = 'recipes_db'; // El nombre de la base de datos a la que se quiere conectar
-$username = 'root'; // El nombre de usuario para acceder a la base de datos (por defecto 'root' en muchas instalaciones de MySQL)
-$password = ''; // La contraseña para el usuario (en este caso está vacía, lo cual es común en instalaciones locales sin configurar contraseña)
+
+$host = getenv('MYSQLHOST'); // El servidor donde está alojada la base de datos (en este caso, 'localhost' indica que está en la misma máquina)
+$dbname = getenv('MYSQLDATABASE'); // El nombre de la base de datos a la que se quiere conectar
+$username = getenv('MYSQLUSER'); // El nombre de usuario para acceder a la base de datos (por defecto 'root' en muchas instalaciones de MySQL)
+$password = getenv('MYSQLPASSWORD'); // La contraseña para el usuario (en este caso está vacía, lo cual es común en instalaciones locales sin configurar contraseña)
 
 // Intenta realizar la conexión a la base de datos dentro de un bloque try-catch para manejar errores
 try {
