@@ -7,6 +7,9 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable mysqli 
 # Copia todo el proyecto al directorio público de Apache
 COPY . /var/www/html/
 
+# Copia explícitamente el archivo .env
+COPY .env /var/www/html/.env
+
 # Ajusta permisos (opcional pero recomendable)
 RUN chown -R www-data:www-data /var/www/html/
 
