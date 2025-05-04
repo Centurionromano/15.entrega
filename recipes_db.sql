@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS recipes (
 );
 
 -- Insertar usuario de ejemplo (admin)
-INSERT INTO users (username, password) VALUES ('admin', PASSWORD('admin123'));
+INSERT INTO users (username, password) VALUES ('admin', ('admin123'));
 
 -- Datos de ejemplo para insertar en la tabla de recetas
 INSERT INTO recipes (name, image_url, type, ingredients, instructions) VALUES
