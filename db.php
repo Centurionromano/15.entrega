@@ -1,40 +1,35 @@
 <?php
 // Ruta del archivo .env
-$env_path = '/var/www/html/15.entrega/.env';
+$env_path = __DIR__ . '/.env';
 
+// Mensaje de depuración para verificar si la ruta es correcta
+echo "Buscando archivo .env en: " . $env_path . "<br>";
 
-// Verificar si el archivo .env existe
+// Verifica si el archivo existe antes de intentar cargarlo
 if (!file_exists($env_path)) {
     die("❌ El archivo .env no existe en: $env_path");
 }
 
-// Intentar leer el archivo .env
+// Cargar variables de entorno manualmente
 $dotenv = parse_ini_file($env_path);
-if ($dotenv === false) {
-    die("❌ No se pudo leer el archivo .env");
-}
-
-// Cargar las variables de entorno
 foreach ($dotenv as $key => $value) {
     putenv("$key=$value");
 }
 
-// Obtener las variables necesarias
-$host = getenv('database.default.hostname');
-$dbname = getenv('database.default.database');
-$username = getenv('database.default.username');
-$password = getenv('database.default.password');
+// Definir las variables de conexión a la base de datos
+$host = getenv('MYSQLHOST');
+$dbname = getenv('MYSQLDATABASE');
+$username = getenv('MYSQLUSER');
+$password = getenv('MYSQLPASSWORD');
 
-// Mostrar los valores para depuración
-echo "🔍 Conectando a: Host=$host | DB=$dbname | Usuario=$username<br>";
-
+// Intenta realizar la conexión a la base de datos
 try {
-    // Establecer conexión PDO (agregar puerto 57120 explícitamente)
     $pdo = new PDO("mysql:host=$host;port=57120;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "✅ Conexión exitosa a la base de datos.<br>";
+    echo "✅ Conexión exitosa a la base de datos.";
 } catch (PDOException $e) {
     echo '❌ Error de conexión: ' . $e->getMessage();
     exit();
 }
 ?>
+
