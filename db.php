@@ -3,7 +3,7 @@
 $env_path = __DIR__ . '/.env';
 
 // Mensaje de depuración para verificar si la ruta es correcta
-echo "Buscando archivo .env en: " . $env_path . "<br>";
+//echo "Buscando archivo .env en: " . $env_path . "<br>";
 
 // Verifica si el archivo existe antes de intentar cargarlo
 if (!file_exists($env_path)) {
@@ -26,7 +26,7 @@ $password = getenv('MYSQLPASSWORD');
 try {
     $pdo = new PDO("mysql:host=$host;port=57120;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "✅ Conexión exitosa a la base de datos.";
+    //echo "✅ Conexión exitosa a la base de datos.";
 } catch (PDOException $e) {
     echo '❌ Error de conexión: ' . $e->getMessage();
     exit();
