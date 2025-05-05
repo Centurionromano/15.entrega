@@ -16,7 +16,7 @@ $username = getenv('MYSQLUSER');
 $password = getenv('MYSQLPASSWORD');
 
 try {
-    $pdo = new PDO("mysql:host=$host;port=57120;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=$host;port=57120;dbname=$dbname;charset=utf8mb4", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //echo "✅ Conexión exitosa a la base de datos.";
 } catch (PDOException $e) {
