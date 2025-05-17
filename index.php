@@ -222,16 +222,18 @@ footer {
 /* Estilo para el encabezado principal */
 .main-header {
     text-align: center;
-    padding: 30px 20px 10px 20px;
+    padding: 50px 20px 10px 20px; /* más espacio arriba */
     background-color: yellow;
     border-bottom: 1px solid #ddd;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: fit-content;
+    margin: 0 0 30px 0; /* elimina margen superior innecesario */
+    width: 100%; /* ocupa todo el ancho */
+    box-sizing: border-box; /* asegura que padding no afecte el ancho */
 }
+
 
 .main-header h1 {
     margin: 0;
+    margin-top: 20px;
     font-size: 2rem;
     color: black;
 }
