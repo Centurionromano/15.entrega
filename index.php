@@ -230,14 +230,14 @@ footer {
 .main-header h1 {
     margin: 0;
     font-size: 2rem;
-    color: #333;
+    color: black;
 }
 
 .main-header p {
     margin-top: 10px;
     font-size: 1rem;
-    color: #555;
-    max-width: 600px;
+    color: yellow;
+    max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
 }
