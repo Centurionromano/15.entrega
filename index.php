@@ -44,6 +44,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   
 </head>
 <body>
+    <header class="main-header">
+        <h1>Recetario familiar</h1>
+        <p>Bienvenido a la familia, ahora puedes subir tu receta favorita para que se tenga en cuenta y así poder tener una mejor organización para tener un menú variado en el día a día.</p>
+    </header>
+
     <div class="container">
         <!-- Título de la página de inicio de sesión -->
         <h2>Iniciar Sesión</h2>
@@ -214,6 +219,54 @@ footer {
     background-color: #f1f1f1;
 }
 
+/* Estilo para el encabezado principal */
+.main-header {
+    text-align: center;
+    padding: 30px 20px 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+.main-header p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-header p {
+        font-size: 0.95rem;
+    }
+
+    footer iframe {
+        width: 100%;
+        height: auto;
+    }
+}
 
 
 
