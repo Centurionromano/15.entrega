@@ -112,15 +112,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <style>
     /* Estilos generales para la página */
+
     body {
-        font-family: Arial, sans-serif; /* Define la fuente */
-        background-color: #f4f7fa; /* Color de fondo claro */
-        display: flex; /* Utiliza Flexbox para centrar el contenido */
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
-        height: 100vh; /* Altura de la pantalla completa */
-        margin: 0; /* Elimina el margen predeterminado */
-    }
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 
     /* Estilos para el contenedor del formulario */
     .container {
@@ -209,9 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flex-direction: column;
 }
 
-body {
-    justify-content: center;
-}
+
 
 footer {
     margin-top: auto;
@@ -225,7 +225,6 @@ footer {
     padding: 50px 20px 10px 20px; /* más espacio arriba */
     background-color: yellow;
     border-bottom: 1px solid #ddd;
-    margin: 0 0 30px 0; /* elimina margen superior innecesario */
     width: 100%; /* ocupa todo el ancho */
     box-sizing: border-box; /* asegura que padding no afecte el ancho */
 }
