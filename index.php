@@ -78,15 +78,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="https://railway.app" target="_blank" title="Railway">
             <img src="https://railway.app/brand/logo-dark.svg" alt="Railway" style="height: 32px;">
         </a>
+
         <a href="https://render.com" target="_blank" title="Render">
-            <img src="https://dashboard.render.com/static/render-logo-dark.svg" alt="Render" style="height: 28px;">
-        </a>
-        <a href="https://northflank.com" target="_blank" title="Northflank">
-            <img src="https://northflank.com/img/logo.70560347.svg" alt="Northflank" style="height: 28px;">
-        </a>
-        <a href="https://fly.io" target="_blank" title="Fly.io">
-            <img src="https://fly.io/static/media/fly-logo.02f2ef22.svg" alt="Fly.io" style="height: 28px;">
-        </a>
+    <img src="https://avatars.githubusercontent.com/u/36424661?s=200&v=4" alt="Render" style="height: 28px; border-radius: 5px;">
+</a>
+<a href="https://northflank.com" target="_blank" title="Northflank">
+    <img src="https://avatars.githubusercontent.com/u/69378842?s=200&v=4" alt="Northflank" style="height: 28px; border-radius: 5px;">
+</a>
+<a href="https://fly.io" target="_blank" title="Fly.io">
+    <img src="https://avatars.githubusercontent.com/u/6752317?s=200&v=4" alt="Fly.io" style="height: 28px; border-radius: 5px;">
+</a>
+
+
         <a href="https://vercel.com" target="_blank" title="Vercel">
             <img src="https://assets.vercel.com/image/upload/front/favicon/vercel/152x152.png" alt="Vercel" style="height: 28px;">
         </a>
