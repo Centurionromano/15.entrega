@@ -222,9 +222,11 @@ footer {
 /* Estilo para el encabezado principal */
 .main-header {
     text-align: center;
-    padding: 10px 20px 10px 0px;
+    padding: 30px 20px 10px 20px;
     background-color: yellow;
     border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .main-header h1 {
