@@ -222,7 +222,7 @@ footer {
 /* Estilo para el encabezado principal */
 .main-header {
     text-align: center;
-    padding: 30px 20px 10px 20px;
+    padding: 10px 20px 10px 0px;
     background-color: yellow;
     border-bottom: 1px solid #ddd;
 }
