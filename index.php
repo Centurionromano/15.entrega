@@ -136,6 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         width: 300px; /* Ancho fijo */
         text-align: center; /* Centra el texto dentro del contenedor */
         margin: 20px auto;
+        margin-top: 180px; /* Empuja el formulario hacia abajo para dejar espacio al header */
     }
 
     h2 {
@@ -232,6 +233,9 @@ footer {
     border-bottom: 1px solid #ddd;
     width: 100%; /* ocupa todo el ancho */
     box-sizing: border-box; /* asegura que padding no afecte el ancho */
+    position: absolute;  /* Lo coloca arriba */
+    top: 0;
+    left: 0;
 }
 
 
