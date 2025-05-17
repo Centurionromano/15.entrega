@@ -223,7 +223,7 @@ footer {
 .main-header {
     text-align: center;
     padding: 30px 20px 10px 20px;
-    background-color: #fff;
+    background-color: yellow;
     border-bottom: 1px solid #ddd;
 }
 
@@ -236,7 +236,7 @@ footer {
 .main-header p {
     margin-top: 10px;
     font-size: 1rem;
-    color: yellow;
+    color: black;
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
