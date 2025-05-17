@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
 }
 
 
@@ -134,9 +134,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         border-radius: 8px; /* Bordes redondeados */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
         width: 300px; /* Ancho fijo */
+        max-width: 90%; 
         text-align: center; /* Centra el texto dentro del contenedor */
         margin: 20px auto;
-        margin-top: 200px; /* Empuja el formulario hacia abajo para dejar espacio al header */
+        margin-top: 20px; /* Empuja el formulario hacia abajo para dejar espacio al header */
     }
 
     h2 {
