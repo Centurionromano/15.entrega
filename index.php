@@ -119,8 +119,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    /*Centrado flexbox */
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -132,6 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
         width: 300px; /* Ancho fijo */
         text-align: center; /* Centra el texto dentro del contenedor */
+        margin: 20px auto;
     }
 
     h2 {
@@ -217,6 +221,7 @@ footer {
     margin-top: auto;
     padding: 20px;
     background-color: #f1f1f1;
+    width: 100%;
 }
 
 /* Estilo para el encabezado principal */
