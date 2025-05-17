@@ -225,8 +225,9 @@ footer {
     padding: 30px 20px 10px 20px;
     background-color: yellow;
     border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: fit-content;
 }
 
 .main-header h1 {
@@ -239,7 +240,7 @@ footer {
     margin-top: 10px;
     font-size: 1rem;
     color: black;
-    max-width: fit-content;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
