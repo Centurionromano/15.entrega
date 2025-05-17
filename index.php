@@ -61,6 +61,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Enlace para agregar un nuevo usuario (redirecciona a 'add_user.php') -->
         <a href="add_user.php" class="btn-green">Agregar usuario</a>
     </div>
+
+    <footer style="margin-top: 30px; text-align: center;">
+    <!-- Video incrustado -->
+    <div style="margin-bottom: 20px;">
+        <iframe width="300" height="170"
+            src="https://www.youtube.com/embed/Y_K5poVTHek"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Enlaces con íconos -->
+    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; align-items: center;">
+        <a href="https://railway.app" target="_blank" title="Railway">
+            <img src="https://railway.app/brand/logo-dark.svg" alt="Railway" style="height: 32px;">
+        </a>
+        <a href="https://render.com" target="_blank" title="Render">
+            <img src="https://dashboard.render.com/static/render-logo-dark.svg" alt="Render" style="height: 28px;">
+        </a>
+        <a href="https://northflank.com" target="_blank" title="Northflank">
+            <img src="https://northflank.com/img/logo.70560347.svg" alt="Northflank" style="height: 28px;">
+        </a>
+        <a href="https://fly.io" target="_blank" title="Fly.io">
+            <img src="https://fly.io/static/media/fly-logo.02f2ef22.svg" alt="Fly.io" style="height: 28px;">
+        </a>
+        <a href="https://vercel.com" target="_blank" title="Vercel">
+            <img src="https://assets.vercel.com/image/upload/front/favicon/vercel/152x152.png" alt="Vercel" style="height: 28px;">
+        </a>
+        <a href="https://netlify.com" target="_blank" title="Netlify">
+            <img src="https://www.netlify.com/v3/img/components/logomark.png" alt="Netlify" style="height: 28px;">
+        </a>
+        <a href="https://deta.space" target="_blank" title="Deta">
+            <img src="https://avatars.githubusercontent.com/u/47602532?s=200&v=4" alt="Deta" style="height: 28px; border-radius: 5px;">
+        </a>
+    </div>
+</footer>
+
 </body>
 </html>
 
@@ -155,5 +193,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
         transition: background-color 0.3s ease; /* Suaviza el cambio de color al pasar el mouse */
     }
+
+    html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    justify-content: center;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+
+
+
 </style>
 
