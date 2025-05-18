@@ -13,10 +13,21 @@ if (!isset($_SESSION['user_id'])) {
 <html lang="es">
 <head>
     <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Recetas</title> <!-- Título de la página -->
     <link rel="stylesheet" href="css/style.css"> <!-- Vincula el archivo CSS para los estilos -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Carga jQuery desde un CDN -->
     <style>
+
+         /*Mismo tamaño de letra  */
+         html {
+  -webkit-text-size-adjust: 100%;  /* iOS Safari */
+  -ms-text-size-adjust: 100%;      /* IE Mobile */ }
+
+
+
+
         /* Estilo para los botones */
         .edit-btn {
             background-color: #007bff; /* Azul para editar */
@@ -122,6 +133,15 @@ if (!isset($_SESSION['user_id'])) {
         .fade-in {
             animation: fadeIn 0.5s ease-out;
         }
+
+        /* justo después  de table.fade-in */
+table, th, td {
+  font-size: 1rem;     /* o 16px, lo que estés usando en tu body */
+  word-break: break-word; /* para que el texto largo se quiebre y no “meta zoom” */
+}
+
+
+
 
         /* Estilo para el contador en la esquina superior derecha */
         .entry-counter {
