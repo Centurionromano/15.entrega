@@ -129,6 +129,10 @@ if (!isset($_SESSION['user_id'])) {
             }
         }
 
+
+
+
+
         /* Clase que aplica el fade-in a la tabla */
         .fade-in {
             animation: fadeIn 0.5s ease-out;
@@ -240,7 +244,81 @@ table, th, td {
             width: 300px;
             max-width: 90%;
         }
+
+        /* 1) Scroll horizontal si hace falta */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+/* 2) Diseño fijo para la tabla */
+.table-responsive table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+/* 3) Celdas con ajuste de palabra y fuente unificada */
+.table-responsive th,
+.table-responsive td {
+  padding: 8px;
+  font-size: 1rem;
+  word-break: break-word;
+  text-align: left;
+}
+
+/* 4) Botones flexibles: en móvil apilan si no caben */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* 5) Reduce padding/font en móviles */
+@media (max-width: 768px) {
+  body .container {
+    padding: 10px;
+  }
+
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+
+  .add-btn,
+  .logout-btn,
+  .edit-btn,
+  .delete-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Centrar el contador y buscar en dos líneas si es muy angosto */
+  #search,
+  .entry-counter {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+  }
+
+  .pagination a {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+  }
+}
+
     </style>
+
+
 </head>
 <body>
     <div class="container">
@@ -266,6 +344,9 @@ table, th, td {
 
         <!-- Contador de entradas -->
         <div class="entry-counter" id="entry-counter">0 Entradas</div>
+
+        <!-- Modificaciones resonsive  -->
+        <div class="table-responsive">
 
         <table class="fade-in">
             <thead>
@@ -293,6 +374,8 @@ table, th, td {
             </thead>
             <tbody id="recipe-list"></tbody>
         </table>
+
+        </div>
 
         <!-- Paginación -->
         <div class="pagination" id="pagination"></div>
