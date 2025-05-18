@@ -137,7 +137,7 @@ if (!isset($_SESSION['user_id'])) {
         /* justo después  de table.fade-in */
 table, th, td {
   font-size: 1rem;     /* o 16px, lo que estés usando en tu body */
-  word-break: break-word; /* para que el texto largo se quiebre y no “meta zoom” */
+  
 }
 
 
