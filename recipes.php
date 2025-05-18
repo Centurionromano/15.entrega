@@ -263,10 +263,12 @@ table, th, td {
 .table-responsive th,
 .table-responsive td {
   padding: 8px;
-  font-size: 1rem;
-  word-break: break-word;
+  font-size: 0.85rem;       /* letra más pequeña */
+  word-break: normal;       /* deja que las palabras se rompan solo al final de línea */
+  white-space: normal;      /* evita saltos automáticos dentro de palabras */
   text-align: left;
 }
+
 
 /* 4) Botones flexibles: en móvil apilan si no caben */
 .button-container {
@@ -284,7 +286,7 @@ table, th, td {
   .table-responsive th,
   .table-responsive td {
     padding: 6px;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
   }
 
   .add-btn,
