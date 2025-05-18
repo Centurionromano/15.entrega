@@ -25,7 +25,7 @@ if (!isset($_SESSION['user_id'])) {
   -webkit-text-size-adjust: 100%;  /* iOS Safari */
   -ms-text-size-adjust: 100%;      /* IE Mobile */ }
 
-
+/* */
 
 
         /* Estilo para los botones */
